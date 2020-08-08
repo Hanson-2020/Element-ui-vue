@@ -8,6 +8,11 @@ import './assets/css/global.css'
 Vue.prototype.axios = axios
 // http://119.23.53.78:8888/api/private/v1/login?username=admin&password=123456
 axios.defaults.baseURL = 'http://119.23.53.78:8888/api/private/v1/'
+axios.interceptors.request.use(config => {
+  // console.log(config)
+  config.headers.Authorization = sessionStorage.getItem('token');
+  return config;
+})
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
