@@ -36,7 +36,7 @@ export default {
         return this.$message.error("获取数据列表失败");
       }
       this.roleList = res.data;
-      console.log(this.roleList);
+      // console.log(this.roleList);
     }
   }
 };

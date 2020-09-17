@@ -4,9 +4,10 @@ import Login from '../components/Login.vue'
 import Home from '../components/home/Home.vue'
 import Welcome from '../components/Welcome.vue'
 import Users from '../components/user/Users.vue'
-import Reports from '../components/math/Reports.vue'
+import Cart from '../components/goods/Cart.vue'
 import Rights from '../components/power/Rights.vue'
 import Roles from '../components/power/Roles.vue'
+import Params from '../components/goods/Params'
 Vue.use(VueRouter)
 const routes = [{
     path: '/',
@@ -29,8 +30,8 @@ const routes = [{
         component: Users
       },
       {
-        path: '/reports',
-        component: Reports
+        path: '/categories',
+        component: Cart
       },
       {
         path: '/rights',
@@ -39,6 +40,10 @@ const routes = [{
       {
         path: '/roles',
         component: Roles
+      },
+      {
+        path: '/params',
+        component: Params
       }
     ]
   },

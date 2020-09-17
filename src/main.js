@@ -5,6 +5,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import './assets/css/global.css'
+import TreeTable from 'vue-table-with-tree-grid'
 Vue.prototype.axios = axios
 // http://119.23.53.78:8888/api/private/v1/login?username=admin&password=123456
 // http://timemeetyou.com:8889/api/private/v1/
@@ -16,7 +17,7 @@ axios.interceptors.request.use(config => {
   return config;
 })
 Vue.config.productionTip = false
-
+Vue.component('tree-table', TreeTable)
 Vue.use(ElementUI)
 new Vue({
   router,
